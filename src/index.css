@@ -1,0 +1,92 @@
+@font-face{
+    font-family: RobotoCondensed;
+    src: url(assets/roboto-condensed.light.ttf);
+    font-weight: 800;
+}
+
+@font-face{
+    font-family: EconomicaBold;
+    src: url(assets/economica-bold.ttf);
+}
+
+body{
+    text-align: center;
+    font-size: 20px;
+    padding: 2.5%;
+    font-family: 'RobotoCondensed';
+}
+
+h1, h2, h3, h4, h5{
+    font-family: 'EconomicaBold';
+}
+
+.profile{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+/* button class btnclick start */
+
+.btnClick{
+  background:#888888;
+  color:#fff;
+  border:none;
+  position:relative;
+  width: 135px;
+  height: 30px;
+  font-size: 0.8em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+.btnClick:hover{
+  background:#fff;
+  color:#888888;
+}
+.btnClick:before, .btnClick:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #888888;
+  transition:400ms ease all;
+}
+.btnClick:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.btnClick:hover:before, .btnClick:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+/* button ends */
+
+
+.title-fade-out{
+    opacity: 0;
+    animation-name: fade-out;
+    animation-duration: 2s;
+}
+
+.title-fade-in{
+    opacity: 100;
+    animation-name: fade-in;
+    animation-duration: 2s;
+}
+
+@keyframes fade-out{
+    from{opacity: 100}
+    to{opacity: 0}
+}
+
+@keyframes fade-in{
+    from{opacity: 0}
+    to{opacity: 100}
+}
